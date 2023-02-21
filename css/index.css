@@ -76,13 +76,13 @@ body {
 }
 .main > .card > .name > h1 {
   margin: 0;
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: bold;
   text-shadow: var(--width-shadow);
 }
 .main > .card > .desc {
   position: absolute;
-  top: 8vw;
+  top: 8.5vw;
   right: 2vw;
   left: 18vw;
   text-shadow: 0 -0.1vw 0.15vw rgba(0, 0, 0, 0.7);
@@ -90,7 +90,7 @@ body {
 }
 .main > .card > .desc > p {
   margin: 0;
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 .main > .card > .button {
   text-decoration: none;
