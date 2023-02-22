@@ -326,6 +326,14 @@ body::before {
       top: -5vw;
       background-image: linear-gradient(190deg, rgba(255, 255, 255, .4), transparent 60%);
       transform: rotate(30deg);
+      // 过渡 right
+      transition: right 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        right: -15vw;
+      }
     }
   }
 

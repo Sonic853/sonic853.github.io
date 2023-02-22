@@ -280,6 +280,10 @@ body::before {
   top: -5vw;
   background-image: linear-gradient(190deg, rgba(255, 255, 255, 0.4), transparent 60%);
   transform: rotate(30deg);
+  transition: right 0.3s;
+}
+.main > .card:hover::before {
+  right: -15vw;
 }
 .main > .footer {
   position: fixed;
