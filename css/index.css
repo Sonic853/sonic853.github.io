@@ -23,6 +23,13 @@ body {
   --width-shadow-hover: 0 0 0.2vw rgba(0, 0, 0, 0.7);
   --text-shadows: 0 -0.1vw 0.1vw #000000;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    --width-shadow: 0 0.3vw 0.15vw rgba(0, 0, 0, 0.7);
+    --width-shadow-hover: 0 0 0.2vw rgba(0, 0, 0, 0.7);
+    --text-shadows: 0 -0.2vw 0.1vw #000000;
+  }
+}
 body::before {
   content: '';
   position: fixed;
@@ -50,6 +57,17 @@ body::before {
   border-radius: 2vw;
   overflow: hidden;
 }
+@media only screen and (max-width: 768px) {
+  .main > .card {
+    width: auto;
+    height: auto;
+    left: 1vw;
+    top: 10vw;
+    right: 1vw;
+    bottom: 10vw;
+    transform: none;
+  }
+}
 .main > .card > .icon {
   position: absolute;
   top: 2vw;
@@ -60,6 +78,13 @@ body::before {
   overflow: hidden;
   border-radius: 2.5vw;
   box-shadow: var(--width-shadow);
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .icon {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 5vw;
+  }
 }
 .main > .card > .icon img {
   width: 100%;
@@ -84,11 +109,21 @@ body::before {
   left: 18vw;
   right: 2vw;
 }
+@media only screen and (max-width: 768px) {
+  .main > .card > .name {
+    left: 33vw;
+  }
+}
 .main > .card > .name > h1 {
   margin: 0;
   font-size: 3vw;
   font-weight: bold;
   text-shadow: var(--width-shadow);
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .name > h1 {
+    font-size: 5vw;
+  }
 }
 .main > .card > .desc {
   position: absolute;
@@ -98,9 +133,20 @@ body::before {
   text-shadow: var(--text-shadows);
   line-height: 1.5;
 }
+@media only screen and (max-width: 768px) {
+  .main > .card > .desc {
+    top: 12vw;
+    left: 33vw;
+  }
+}
 .main > .card > .desc > p {
   margin: 0;
   font-size: 1.2vw;
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .desc > p {
+    font-size: 3.6vw;
+  }
 }
 .main > .card > .button {
   text-decoration: none;
@@ -119,11 +165,24 @@ body::before {
   box-shadow: var(--width-shadow);
   transition: box-shadow 0.3s;
 }
+@media only screen and (max-width: 768px) {
+  .main > .card > .button {
+    border-width: 0.6vw;
+    border-radius: 2vw;
+    font-size: 2.4vw;
+  }
+}
 .main > .card > .button:hover {
   box-shadow: var(--width-shadow-hover);
 }
 .main > .card > .button:active {
   background-image: linear-gradient(#6f94e4 0%, #3b72e1 49%, #2260dd 50%, #2362de 100%);
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .button {
+    bottom: auto;
+    top: 2vw;
+  }
 }
 .main > .card > .links {
   position: absolute;
@@ -136,8 +195,22 @@ body::before {
   right: 0;
   bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: flex-start;
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .links {
+    top: 34vw;
+    padding: 2vw 2vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: auto;
+  }
+  .main > .card > .links::-webkit-scrollbar {
+    display: none;
+  }
 }
 .main > .card > .links > .link {
   text-decoration: none;
@@ -153,6 +226,14 @@ body::before {
   transition: box-shadow 0.3s;
   overflow: hidden;
   border-radius: 1vw;
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .links > .link > .icon {
+    width: 17.5vw;
+    height: 17.5vw;
+    margin: 3vw 3vw 0 3vw;
+    border-radius: 3vw;
+  }
 }
 .main > .card > .links > .link > .icon > img {
   width: 100%;
@@ -180,6 +261,12 @@ body::before {
   font-weight: bold;
   text-shadow: var(--width-shadow);
   font-size: 1vw;
+}
+@media only screen and (max-width: 768px) {
+  .main > .card > .links > .link > p {
+    margin-top: 0.5vw;
+    font-size: 3.5vw;
+  }
 }
 .main > .card::before {
   content: '';
